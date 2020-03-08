@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Important Points</h2>
+<ul>
+  {% for point in summary %}
+  {% if point != "" %}
+  <li>{{ point }}</li>
+  {% endif %}
+  {% endfor %}
+</ul>
+<h2>Entities</h2>
+<ul>
+  {% for person in people %}
+  <li>{{ person }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
